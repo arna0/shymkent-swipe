@@ -32,7 +32,7 @@ export function Hero({ problems, onStart, onReport }: { problems: ProblemReport[
           </div>
         </div>
 
-        <div className="relative h-[420px] hidden md:block">
+        <div className="relative h-[420px] hidden lg:block">
           {cards.map((p, i) => (
             <div
               key={p.id}
