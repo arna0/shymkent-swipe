@@ -6,6 +6,7 @@ import { FeedApiTester } from './components/FeedApiTester';
 import { SchemaViewer } from './components/SchemaViewer';
 import { ERDiagram } from './components/ERDiagram';
 import { SwipeSimulator } from './components/SwipeSimulator';
+import { Hero } from './components/Hero';
 import { AkimatDashboard } from './components/AkimatDashboard';
 import { AiClusteringTester } from './components/AiClusteringTester';
 import { UrbanistGamification } from './components/UrbanistGamification';
@@ -138,12 +139,16 @@ export default function App() {
       {/* Main View Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-7">
         {activeTab === 'simulator' && (
+          <>
+          <Hero problems={problems} onStart={() => document.getElementById('feed')?.scrollIntoView({ behavior: 'smooth' })} onReport={() => setActiveTab('report-problem')} />
+          <div id="feed" className="scroll-mt-24" />
           <SwipeSimulator
             problems={problems}
             setProblems={setProblems}
             currentUser={currentUser}
             setCurrentUser={setCurrentUser}
           />
+          </>
         )}
 
         {activeTab === 'report-problem' && (

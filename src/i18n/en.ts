@@ -323,6 +323,16 @@ export const EN: Record<string, string> = {
   'Интерактивный тестер': 'Interactive tester',
   'Промпт 9: Telegram Mini App (TMA)': 'Telegram Mini App (TMA)',
 
+  // ---------- hero ----------
+  'Шымкент · городские проблемы': 'Shymkent · city problems',
+  'Решайте, что': 'Decide what',
+  'починить в городе': 'the city fixes',
+  'в первую очередь': 'first',
+  'Свайпайте городские проблемы: важные поднимаются выше и автоматически уходят в службу 109.': 'Swipe through city problems: the important ones rise to the top and go to the 109 service automatically.',
+  'Начать свайпать': 'Start swiping',
+  'Сообщить о проблеме': 'Report a problem',
+  'Листайте вниз': 'Scroll down',
+
   // ---------- example data ----------
   'Глубокая яма на перекрестке пр. Тауке Хана и ул. Байтурсынова': 'Deep pothole at Tauke Khan Ave and Baitursynov St',
   'Глубокая яма на перекрестке пр. Кунаева и ул. Туркестанская': 'Deep pothole at Kunaev Ave and Turkestan St',
