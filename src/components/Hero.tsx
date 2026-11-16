@@ -22,7 +22,7 @@ export function Hero({ problems, onStart, onReport }: { problems: ProblemReport[
           <div className="flex flex-wrap items-center gap-6 mt-9">
             <button
               onClick={onStart}
-              className="px-9 py-4 rounded-full bg-cyan-400 text-[#1a1a14] text-[12px] font-bold uppercase tracking-[0.1em] shadow-[0_10px_30px_-10px_rgba(223,232,160,0.6)] hover:brightness-105 transition"
+              className="px-9 py-4 rounded-full bg-cyan-400 text-[#1a1a14] text-[12px] font-bold uppercase tracking-[0.1em] shadow-[0_10px_30px_-10px_rgba(255,210,63,0.6)] hover:brightness-105 transition"
             >
               Начать свайпать
             </button>
@@ -36,7 +36,7 @@ export function Hero({ problems, onStart, onReport }: { problems: ProblemReport[
           {cards.map((p, i) => (
             <div
               key={p.id}
-              className="absolute w-[300px] rounded-2xl overflow-hidden border border-white/10 bg-[#262626] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.85)]"
+              className="absolute w-[300px] rounded-2xl overflow-hidden border border-white/10 bg-[#18213a] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.85)]"
               style={{ top: `${[30, 0, 60][i]}px`, left: `${[22, 2, 42][i]}%`, transform: `rotate(${[-2, -6, 5][i]}deg)`, zIndex: i === 0 ? 3 : 2 - i }}
             >
               <img src={p.photoUrls[0]} alt="" className="h-44 w-full object-cover" />

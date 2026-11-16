@@ -201,7 +201,7 @@ export const SwipeEkcTester: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
+      <div className="bg-[#141c33] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.08)_0%,_transparent_60%)] pointer-events-none" />
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 relative z-10">
@@ -343,7 +343,7 @@ export const SwipeEkcTester: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left Column: Swipe Action Simulator (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="bg-[#202020] rounded-2xl p-6 border border-white/10 shadow-xl space-y-6">
+            <div className="bg-[#141c33] rounded-2xl p-6 border border-white/10 shadow-xl space-y-6">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div className="flex items-center gap-2">
                   <Flame className="w-4 h-4 text-cyan-400" />
@@ -497,7 +497,7 @@ export const SwipeEkcTester: React.FC = () => {
           {/* Right Column: Real-time Server Response & Ticket Preview (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             {/* Gamification Card */}
-            <div className="bg-[#202020] rounded-2xl p-6 border border-white/10 shadow-xl space-y-4">
+            <div className="bg-[#141c33] rounded-2xl p-6 border border-white/10 shadow-xl space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-cyan-400" />
@@ -542,7 +542,7 @@ export const SwipeEkcTester: React.FC = () => {
             </div>
 
             {/* Server JSON Response Preview */}
-            <div className="bg-[#202020] rounded-2xl p-6 border border-white/10 shadow-xl space-y-3">
+            <div className="bg-[#141c33] rounded-2xl p-6 border border-white/10 shadow-xl space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Code2 className="w-4 h-4 text-cyan-400" />
@@ -577,7 +577,7 @@ export const SwipeEkcTester: React.FC = () => {
 
       {/* EKC 109 Ticket Generator View */}
       {activeTab === 'EKC_TICKET' && (
-        <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6">
+        <div className="bg-[#141c33] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6">
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider">
               <Building2 className="w-4 h-4" />
@@ -641,8 +641,8 @@ export const SwipeEkcTester: React.FC = () => {
 
       {/* Code Viewer: Swipe Service */}
       {activeTab === 'SWIPE_SERVICE_CODE' && (
-        <div className="bg-[#1d1d1d] rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
-          <div className="bg-[#202020] px-6 py-4 border-b border-white/10 flex items-center justify-between">
+        <div className="bg-[#0f1629] rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+          <div className="bg-[#141c33] px-6 py-4 border-b border-white/10 flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Code2 className="w-4 h-4 text-cyan-400" />
               <span className="text-gray-200 text-xs font-mono">src/server/services/swipeService.ts</span>
@@ -663,8 +663,8 @@ export const SwipeEkcTester: React.FC = () => {
 
       {/* Code Viewer: EKC 109 Service */}
       {activeTab === 'EKC_SERVICE_CODE' && (
-        <div className="bg-[#1d1d1d] rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
-          <div className="bg-[#202020] px-6 py-4 border-b border-white/10 flex items-center justify-between">
+        <div className="bg-[#0f1629] rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+          <div className="bg-[#141c33] px-6 py-4 border-b border-white/10 flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Code2 className="w-4 h-4 text-cyan-400" />
               <span className="text-gray-200 text-xs font-mono">src/server/services/ekc109Service.ts</span>

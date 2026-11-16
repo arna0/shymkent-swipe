@@ -333,7 +333,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
+      <div className="bg-[#141c33] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.08)_0%,_transparent_60%)] pointer-events-none" />
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 relative z-10">
@@ -420,7 +420,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
         <div className="max-w-4xl mx-auto">
           {/* Success Modal / Banner when created */}
           {createdResult ? (
-            <div className="bg-[#202020] rounded-3xl p-8 border border-emerald-500/30 text-[#e0e0e2] shadow-2xl space-y-6 text-center animate-in fade-in zoom-in duration-300">
+            <div className="bg-[#141c33] rounded-3xl p-8 border border-emerald-500/30 text-[#e0e0e2] shadow-2xl space-y-6 text-center animate-in fade-in zoom-in duration-300">
               <div className="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl flex items-center justify-center mx-auto">
                 <CheckCircle2 className="w-8 h-8 text-emerald-400" />
               </div>
@@ -485,7 +485,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
             </div>
           ) : (
             /* Main Form Layout (Mobile PWA Container) */
-            <form onSubmit={handleSubmit} className="bg-[#202020] rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-8">
+            <form onSubmit={handleSubmit} className="bg-[#141c33] rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-8">
               {/* Quick 1-Click Demo Scenarios */}
               <div className="bg-cyan-950/40 p-4 rounded-2xl border border-cyan-500/20">
                 <div className="flex items-center justify-between mb-2.5">
@@ -816,7 +816,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
         </div>
       ) : (
         /* API Specification & Server Code Tab */
-        <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6">
+        <div className="bg-[#141c33] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6">
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider">
               <Code2 className="w-4 h-4" />

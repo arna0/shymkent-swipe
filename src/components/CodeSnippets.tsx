@@ -35,7 +35,7 @@ export const CodeSnippets: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
+      <div className="bg-[#141c33] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.06)_0%,_transparent_60%)] pointer-events-none" />
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 relative z-10">
@@ -105,8 +105,8 @@ export const CodeSnippets: React.FC = () => {
       </div>
 
       {/* Code Display Frame */}
-      <div className="bg-[#1d1d1d] rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
-        <div className="bg-[#202020] px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-2">
+      <div className="bg-[#0f1629] rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+        <div className="bg-[#141c33] px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center space-x-2">
             <Terminal className="w-4 h-4 text-cyan-400" />
             <span className="text-gray-200 text-xs font-mono">{current.title}</span>

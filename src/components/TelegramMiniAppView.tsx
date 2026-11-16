@@ -128,7 +128,7 @@ export const TelegramMiniAppView: React.FC<TelegramMiniAppViewProps> = ({
         <div
           className={`px-4 py-3 border-b flex items-center justify-between ${
             isTelegramDark
-              ? 'bg-[#2c2c2c] border-[#17212b] text-white'
+              ? 'bg-[#1c2540] border-[#17212b] text-white'
               : 'bg-[#517da2] border-[#446c8d] text-white'
           }`}
         >
@@ -155,7 +155,7 @@ export const TelegramMiniAppView: React.FC<TelegramMiniAppViewProps> = ({
           <div
             className={`p-2.5 rounded-2xl flex items-center justify-between text-xs ${
               isTelegramDark
-                ? 'bg-[#2c2c2c] border border-[#353535]'
+                ? 'bg-[#1c2540] border border-[#26304d]'
                 : 'bg-slate-100 border border-slate-200'
             }`}
           >
@@ -183,7 +183,7 @@ export const TelegramMiniAppView: React.FC<TelegramMiniAppViewProps> = ({
             <div
               className={`rounded-2xl overflow-hidden border shadow-lg transition flex flex-col justify-between ${
                 isTelegramDark
-                  ? 'bg-[#2c2c2c] border-[#353535]'
+                  ? 'bg-[#1c2540] border-[#26304d]'
                   : 'bg-slate-50 border-slate-200'
               }`}
               style={{ minHeight: '440px' }}
@@ -276,7 +276,7 @@ export const TelegramMiniAppView: React.FC<TelegramMiniAppViewProps> = ({
           ) : (
             <div
               className={`p-8 rounded-2xl border text-center space-y-4 flex flex-col items-center justify-center ${
-                isTelegramDark ? 'bg-[#2c2c2c] border-[#353535]' : 'bg-slate-50 border-slate-200'
+                isTelegramDark ? 'bg-[#1c2540] border-[#26304d]' : 'bg-slate-50 border-slate-200'
               }`}
               style={{ minHeight: '380px' }}
             >
