@@ -72,7 +72,7 @@ export const InteractiveMapPicker: React.FC<InteractiveMapPickerProps> = ({
       html: `
         <div style="position: relative; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
           <div style="position: absolute; width: 36px; height: 36px; background: rgba(34, 211, 238, 0.35); border-radius: 50%; animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;"></div>
-          <div style="width: 24px; height: 24px; background: #22d3ee; border: 3px solid #0c0c0e; border-radius: 50%; box-shadow: 0 0 12px rgba(34, 211, 238, 0.9); display: flex; align-items: center; justify-content: center;">
+          <div style="width: 24px; height: 24px; background: #22d3ee; border: 3px solid #1d1d1d; border-radius: 50%; box-shadow: 0 0 12px rgba(34, 211, 238, 0.9); display: flex; align-items: center; justify-content: center;">
             <div style="width: 6px; height: 6px; background: #000; border-radius: 50%;"></div>
           </div>
         </div>
@@ -147,7 +147,7 @@ export const InteractiveMapPicker: React.FC<InteractiveMapPickerProps> = ({
         <div ref={mapContainerRef} className="w-full h-full z-0" />
 
         {/* Floating coordinates badge */}
-        <div className="absolute top-3 left-3 z-[400] bg-[#0e0e11]/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10 text-[11px] font-mono text-cyan-300 flex items-center gap-2 shadow-lg">
+        <div className="absolute top-3 left-3 z-[400] bg-[#202020]/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10 text-[11px] font-mono text-cyan-300 flex items-center gap-2 shadow-lg">
           <Crosshair className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
           <span>
             {latitude.toFixed(5)}, {longitude.toFixed(5)}
@@ -156,7 +156,7 @@ export const InteractiveMapPicker: React.FC<InteractiveMapPickerProps> = ({
           <span className="text-white font-sans font-medium">{DISTRICT_LABELS[selectedDistrict]?.ru}</span>
         </div>
 
-        <div className="absolute bottom-3 right-3 z-[400] bg-[#0e0e11]/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-[10px] text-gray-400">
+        <div className="absolute bottom-3 right-3 z-[400] bg-[#202020]/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-[10px] text-gray-400">
           Нажмите на карту или перетащите маркер
         </div>
       </div>

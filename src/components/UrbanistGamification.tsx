@@ -97,7 +97,7 @@ export const UrbanistGamification: React.FC<UrbanistGamificationProps> = ({
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ['#0ea5e9', '#10b981', '#f59e0b', '#8b5cf6'],
+          colors: ['#dfe8a0', '#10b981', '#f59e0b', '#8b5cf6'],
         });
       }
     } catch (e) {
@@ -349,7 +349,7 @@ export const UrbanistGamification: React.FC<UrbanistGamificationProps> = ({
                       <div className="flex items-center gap-2">
                         <span className="font-bold text-slate-900 text-sm">{item.fullName}</span>
                         {isMe && (
-                          <span className="px-2 py-0.5 bg-sky-600 text-white text-[10px] font-bold rounded-full">
+                          <span className="px-2 py-0.5 bg-sky-600 text-[#1a1a14] text-[10px] font-bold rounded-full">
                             Вы
                           </span>
                         )}

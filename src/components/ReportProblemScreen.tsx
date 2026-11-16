@@ -304,7 +304,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
           particleCount: 100,
           spread: 80,
           origin: { y: 0.5 },
-          colors: ['#0ea5e9', '#10b981', '#f59e0b', '#8b5cf6'],
+          colors: ['#dfe8a0', '#10b981', '#f59e0b', '#8b5cf6'],
         });
       } else {
         setErrorMsg(data.message || 'Ошибка создания проблемы на сервере');
@@ -333,7 +333,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-[#0e0e11] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
+      <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.08)_0%,_transparent_60%)] pointer-events-none" />
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 relative z-10">
@@ -420,7 +420,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
         <div className="max-w-4xl mx-auto">
           {/* Success Modal / Banner when created */}
           {createdResult ? (
-            <div className="bg-[#0e0e11] rounded-3xl p-8 border border-emerald-500/30 text-[#e0e0e2] shadow-2xl space-y-6 text-center animate-in fade-in zoom-in duration-300">
+            <div className="bg-[#202020] rounded-3xl p-8 border border-emerald-500/30 text-[#e0e0e2] shadow-2xl space-y-6 text-center animate-in fade-in zoom-in duration-300">
               <div className="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl flex items-center justify-center mx-auto">
                 <CheckCircle2 className="w-8 h-8 text-emerald-400" />
               </div>
@@ -459,7 +459,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
                 {onNavigateToSimulator && (
                   <button
                     onClick={onNavigateToSimulator}
-                    className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xs shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xs shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center gap-2"
                   >
                     <Flame className="w-4 h-4" />
                     <span>📱 Перейти в ленту свайпов к новой карточке</span>
@@ -485,7 +485,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
             </div>
           ) : (
             /* Main Form Layout (Mobile PWA Container) */
-            <form onSubmit={handleSubmit} className="bg-[#0e0e11] rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-8">
+            <form onSubmit={handleSubmit} className="bg-[#202020] rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-8">
               {/* Quick 1-Click Demo Scenarios */}
               <div className="bg-cyan-950/40 p-4 rounded-2xl border border-cyan-500/20">
                 <div className="flex items-center justify-between mb-2.5">
@@ -501,7 +501,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
                       key={sc.id}
                       type="button"
                       onClick={() => handleApplyScenario(sc)}
-                      className="p-2.5 rounded-xl bg-black/40 hover:bg-cyan-500/15 border border-white/5 hover:border-cyan-400/50 text-left text-xs font-medium text-gray-200 hover:text-white transition-all truncate"
+                      className="p-2.5 rounded-full bg-black/40 hover:bg-cyan-500/15 border border-white/5 hover:border-cyan-400/50 text-left text-xs font-medium text-gray-200 hover:text-[#1a1a14] transition-all truncate"
                     >
                       {sc.label}
                     </button>
@@ -521,7 +521,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono text-xs font-bold">
+                    <div className="w-7 h-7 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono text-xs font-bold">
                       1
                     </div>
                     <div>
@@ -606,7 +606,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
               {/* SECTION 2: Category Selector */}
               <div className="space-y-3 pt-4 border-t border-white/10">
                 <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono text-xs font-bold">
+                  <div className="w-7 h-7 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono text-xs font-bold">
                     2
                   </div>
                   <div>
@@ -651,7 +651,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
               <div className="space-y-4 pt-4 border-t border-white/10">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                   <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono text-xs font-bold">
+                    <div className="w-7 h-7 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono text-xs font-bold">
                       3
                     </div>
                     <div>
@@ -667,7 +667,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
                     type="button"
                     onClick={handleAutoGeolocation}
                     disabled={isLocating}
-                    className="px-3.5 py-2 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/40 text-cyan-300 font-medium text-xs flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/10 transition-all shrink-0"
+                    className="px-3.5 py-2 rounded-full bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/40 text-cyan-300 font-medium text-xs flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/10 transition-all shrink-0"
                   >
                     <LocateFixed className={`w-4 h-4 text-cyan-400 ${isLocating ? 'animate-spin' : ''}`} />
                     <span>{isLocating ? 'Определение GPS...' : 'Определить мое местоположение'}</span>
@@ -676,7 +676,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
 
                 {/* Status toast for geolocation */}
                 {locationSuccessMsg && (
-                  <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs flex items-center gap-2">
+                  <div className="p-3 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                     <span>{locationSuccessMsg}</span>
                   </div>
@@ -726,7 +726,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
               {/* SECTION 4: Problem Title & Dispatcher Description */}
               <div className="space-y-4 pt-4 border-t border-white/10">
                 <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono text-xs font-bold">
+                  <div className="w-7 h-7 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono text-xs font-bold">
                     4
                   </div>
                   <div>
@@ -788,7 +788,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
               {/* Submit CTA Bar */}
               <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0">
                     <Zap className="w-5 h-5" />
                   </div>
                   <div>
@@ -816,7 +816,7 @@ export const ReportProblemScreen: React.FC<ReportProblemScreenProps> = ({
         </div>
       ) : (
         /* API Specification & Server Code Tab */
-        <div className="bg-[#0e0e11] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6">
+        <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6">
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider">
               <Code2 className="w-4 h-4" />

@@ -70,7 +70,7 @@ const createCustomPin = (criticality: number, isResolved: boolean) => {
     bgColor = '#10b981'; // Green
     label = '✓';
   } else if (criticality < 5.5) {
-    bgColor = '#0ea5e9'; // Blue
+    bgColor = '#dfe8a0'; // Blue
   } else if (criticality < 8.0) {
     bgColor = '#f59e0b'; // Amber
   }
@@ -266,7 +266,7 @@ export const AkimatDashboard: React.FC<AkimatDashboardProps> = ({
         {
           data: counts,
           backgroundColor: [
-            '#0ea5e9',
+            '#dfe8a0',
             '#f59e0b',
             '#ef4444',
             '#10b981',

@@ -167,7 +167,7 @@ export const SwipeSimulator: React.FC<SwipeSimulatorProps> = ({
 
           {/* Action counter */}
           <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md p-3 px-4 rounded-xl border border-white/15">
-            <div className="w-10 h-10 rounded-xl bg-sky-500/20 flex items-center justify-center text-sky-300 font-black text-lg">
+            <div className="w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-300 font-black text-lg">
               {filteredProblems.length}
             </div>
             <div>
@@ -331,7 +331,7 @@ export const SwipeSimulator: React.FC<SwipeSimulatorProps> = ({
               <p className="text-xs text-slate-400 mt-1">Переключите фильтр района или выберите "Весь Шымкент".</p>
               <button
                 onClick={() => setSelectedDistrict('ALL')}
-                className="mt-5 px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-bold uppercase tracking-wider transition shadow-lg"
+                className="mt-5 px-5 py-2.5 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-bold uppercase tracking-wider transition shadow-lg"
               >
                 Показать весь город
               </button>
@@ -422,7 +422,7 @@ export const SwipeSimulator: React.FC<SwipeSimulatorProps> = ({
                       {/* Volunteer Button */}
                       <button
                         onClick={() => handleSwipe(SwipeType.UP_VOLUNTEER)}
-                        className="px-5 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl text-xs font-bold uppercase tracking-wider active:scale-95 transition-all shadow-lg flex items-center gap-2"
+                        className="px-5 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-[#1a1a14] rounded-2xl text-xs font-bold uppercase tracking-wider active:scale-95 transition-all shadow-lg flex items-center gap-2"
                       >
                         <HandHeart className="w-4 h-4 text-purple-200" />
                         <span>Помогу (+50 XP)</span>

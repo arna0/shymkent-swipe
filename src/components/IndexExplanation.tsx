@@ -15,11 +15,11 @@ export const IndexExplanation: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Intro Header */}
-      <div className="bg-[#0e0e11] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
+      <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.06)_0%,_transparent_60%)] pointer-events-none" />
 
         <div className="flex items-center gap-4 relative z-10">
-          <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0">
+          <div className="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0">
             <Zap className="w-6 h-6 text-cyan-400" />
           </div>
           <div>
@@ -37,10 +37,10 @@ export const IndexExplanation: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         {/* 1. Spatial & Geo Index */}
-        <div className="bg-[#0e0e11]/90 rounded-2xl p-6 border border-white/10 space-y-4 shadow-xl">
+        <div className="bg-[#202020]/90 rounded-2xl p-6 border border-white/10 space-y-4 shadow-xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="p-2 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+              <div className="p-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
                 <MapPin className="w-4 h-4" />
               </div>
               <h3 className="font-semibold text-sm text-white">1. Гео-индекс координат (OSM)</h3>
@@ -71,7 +71,7 @@ export const IndexExplanation: React.FC = () => {
         </div>
 
         {/* 2. Criticality Swipe Feed Index */}
-        <div className="bg-[#0e0e11]/90 rounded-2xl p-6 border border-white/10 space-y-4 shadow-xl">
+        <div className="bg-[#202020]/90 rounded-2xl p-6 border border-white/10 space-y-4 shadow-xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <div className="p-2 rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-400">
@@ -105,7 +105,7 @@ export const IndexExplanation: React.FC = () => {
         </div>
 
         {/* 3. Unique Swipe Constraint */}
-        <div className="bg-[#0e0e11]/90 rounded-2xl p-6 border border-white/10 space-y-4 shadow-xl">
+        <div className="bg-[#202020]/90 rounded-2xl p-6 border border-white/10 space-y-4 shadow-xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <div className="p-2 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400">
@@ -129,10 +129,10 @@ export const IndexExplanation: React.FC = () => {
         </div>
 
         {/* 4. Akimat Aggregation Index */}
-        <div className="bg-[#0e0e11]/90 rounded-2xl p-6 border border-white/10 space-y-4 shadow-xl">
+        <div className="bg-[#202020]/90 rounded-2xl p-6 border border-white/10 space-y-4 shadow-xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="p-2 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+              <div className="p-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
                 <Layers className="w-4 h-4" />
               </div>
               <h3 className="font-semibold text-sm text-white">4. Индекс Районного Дашборда</h3>

@@ -52,11 +52,11 @@ function LangSwitch() {
 
 export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, currentUser, onSeedDemoData }) => {
   return (
-    <header className="sticky top-0 z-50 bg-[#0f1012]/95 backdrop-blur border-b border-slate-800 text-slate-200">
+    <header className="sticky top-0 z-50 bg-[#1d1d1d]/95 backdrop-blur border-b border-slate-800 text-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-3">
           <button className="flex items-center gap-2.5 select-none" onClick={() => setActiveTab('simulator')}>
-            <span className="w-8 h-8 bg-sky-500 rounded-lg grid place-items-center font-extrabold text-slate-950 text-sm">Ш</span>
+            <span className="w-8 h-8 bg-sky-500 rounded-full grid place-items-center font-extrabold text-slate-950 text-sm">Ш</span>
             <span className="text-[17px] font-bold tracking-tight text-white">
               Шымкент <span className="text-sky-400">Свайп 109</span>
             </span>

@@ -38,7 +38,7 @@ export const SchemaViewer: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Banner Overview */}
-      <div className="bg-[#0e0e11] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
+      <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.07)_0%,_transparent_60%)] pointer-events-none" />
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 relative z-10">
@@ -76,7 +76,7 @@ export const SchemaViewer: React.FC = () => {
 
             <button
               onClick={handleDownload}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-semibold text-xs transition-all"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-black font-semibold text-xs transition-all"
             >
               <Download className="w-4 h-4" />
               <span>Скачать файл</span>
@@ -125,9 +125,9 @@ export const SchemaViewer: React.FC = () => {
       </div>
 
       {/* Code Editor Frame */}
-      <div className="bg-[#0c0c0e] rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+      <div className="bg-[#1d1d1d] rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
         {/* Editor Toolbar */}
-        <div className="bg-[#0e0e11] px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-3">
+        <div className="bg-[#202020] px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center space-x-2">
             <div className="flex space-x-1.5">
               <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />

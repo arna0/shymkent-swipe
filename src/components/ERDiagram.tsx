@@ -125,11 +125,11 @@ export const ERDiagram: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Title Header */}
-      <div className="bg-[#0e0e11] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
+      <div className="bg-[#202020] rounded-2xl p-6 sm:p-8 border border-white/10 text-[#e0e0e2] shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.06)_0%,_transparent_60%)] pointer-events-none" />
 
         <div className="flex items-center gap-4 relative z-10">
-          <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0">
+          <div className="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0">
             <Layers className="w-6 h-6 text-cyan-400" />
           </div>
           <div>
@@ -156,7 +156,7 @@ export const ERDiagram: React.FC = () => {
               className={`cursor-pointer rounded-2xl p-5 border transition-all duration-200 ${
                 isSelected
                   ? 'bg-[#1a1a1e] border-cyan-500/40 ring-1 ring-cyan-500/30'
-                  : 'bg-[#0e0e11]/80 border-white/10 hover:border-white/20 hover:bg-[#1a1a1e]/50'
+                  : 'bg-[#202020]/80 border-white/10 hover:border-white/20 hover:bg-[#1a1a1e]/50'
               }`}
             >
               <div className="flex items-center justify-between mb-3">
@@ -190,7 +190,7 @@ export const ERDiagram: React.FC = () => {
       </div>
 
       {/* Deep Inspection Panel */}
-      <div className="bg-[#0e0e11]/90 rounded-2xl border border-white/10 p-6 shadow-xl space-y-6">
+      <div className="bg-[#202020]/90 rounded-2xl border border-white/10 p-6 shadow-xl space-y-6">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 pb-6 border-b border-white/10">
           <div className="flex items-center gap-3">
             <div className={`p-3 rounded-2xl border ${current.color}`}>

@@ -266,7 +266,7 @@ def analyze(req: dict):
               <button
                 onClick={handleTestAi}
                 disabled={isLoading}
-                className="w-full py-3 bg-sky-600 hover:bg-sky-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2"
+                className="w-full py-3 bg-sky-600 hover:bg-sky-700 text-[#1a1a14] rounded-full font-semibold shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2"
               >
                 {isLoading ? (
                   <>
@@ -423,7 +423,7 @@ def analyze(req: dict):
             </div>
             <button
               onClick={copyPythonCode}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-medium transition"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-sky-600 hover:bg-sky-500 text-[#1a1a14] rounded-full text-xs font-medium transition"
             >
               <Copy className="w-3.5 h-3.5" />
               <span>{copied ? 'Скопировано!' : 'Копировать'}</span>
@@ -467,14 +467,14 @@ def analyze_complaint(req: ComplaintSchema):
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
-              <div className="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm mb-3">1</div>
+              <div className="w-8 h-8 rounded-full bg-sky-600 text-[#1a1a14] flex items-center justify-center font-bold text-sm mb-3">1</div>
               <h4 className="font-bold text-slate-900 text-sm mb-1">Подача жалобы жителем</h4>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Житель Шымкента фотографирует дефект и отправляет GPS-координаты через PWA или Telegram Mini App.
               </p>
             </div>
             <div className="p-4 bg-indigo-50 rounded-xl border border-indigo-100">
-              <div className="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold text-sm mb-3">2</div>
+              <div className="w-8 h-8 rounded-lg bg-indigo-600 text-[#1a1a14] flex items-center justify-center font-bold text-sm mb-3">2</div>
               <h4 className="font-bold text-slate-900 text-sm mb-1">Гео-проверка 30м и NLP</h4>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Микросервис проверяет радиус 30 метров за 48 часов. Если дубликат найден — голос прибавляется к счетчику без создания шума в ЕКЦ 109.

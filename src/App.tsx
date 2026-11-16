@@ -108,7 +108,7 @@ export default function App() {
           particleCount: 100,
           spread: 80,
           origin: { y: 0.5 },
-          colors: ['#0ea5e9', '#10b981', '#f59e0b'],
+          colors: ['#dfe8a0', '#10b981', '#f59e0b'],
         });
         setTimeout(() => setSeedNotification(null), 4000);
       }
