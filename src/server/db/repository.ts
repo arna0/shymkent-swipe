@@ -472,6 +472,17 @@ class ShymkentDataRepository {
   public resetUserSwipes(userId: string) {
     this.swipes = this.swipes.filter(s => s.userId !== userId);
   }
+
+  // Used by the SQLite persistence layer (src/server/db/sqlite.ts) on the Node server.
+  public exportState() {
+    return { users: [...this.users.values()], problems: [...this.problems.values()], swipes: this.swipes };
+  }
+
+  public importState(state: { users: User[]; problems: ProblemReport[]; swipes: SwipeAction[] }) {
+    this.users = new Map(state.users.map((u) => [u.id, u]));
+    this.problems = new Map(state.problems.map((p) => [p.id, p]));
+    this.swipes = state.swipes;
+  }
 }
 
 export const dbRepository = new ShymkentDataRepository();

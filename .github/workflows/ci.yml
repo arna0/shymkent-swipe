@@ -1,0 +1,32 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  server-and-database:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm run build
+      - name: Swipe is saved to SQLite and survives a restart
+        env:
+          NODE_ENV: production
+          DB_FILE: /tmp/ci.db
+        run: |
+          set -e
+          node dist/server.cjs > /tmp/s1.log 2>&1 & PID=$!
+          for i in $(seq 1 30); do curl -sf localhost:3000/api/health && break; sleep 1; done
+          PROBLEM=$(curl -sf localhost:3000/api/problems | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const j=JSON.parse(s);const list=j.data||j.problems||j;console.log(list[0].id)})')
+          echo "problem: $PROBLEM"
+          curl -sf -X POST localhost:3000/api/swipe -H 'Content-Type: application/json' \
+            -d "{\"userId\":\"usr-shym-002\",\"problemId\":\"$PROBLEM\",\"swipeType\":\"RIGHT_IMPORTANT\"}"
+          kill $PID; sleep 1
+          node dist/server.cjs > /tmp/s2.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf localhost:3000/api/health && break; sleep 1; done
+          code=$(curl -s -o /dev/null -w '%{http_code}' -X POST localhost:3000/api/swipe -H 'Content-Type: application/json' \
+            -d "{\"userId\":\"usr-shym-002\",\"problemId\":\"$PROBLEM\",\"swipeType\":\"RIGHT_IMPORTANT\"}")
+          echo "second swipe after restart -> $code (409 means the first one was saved)"
+          cat /tmp/s1.log /tmp/s2.log
+          test "$code" = 409

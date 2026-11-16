@@ -2,13 +2,13 @@ import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import feedRoutes from './src/server/routes/feedRoutes';
+import { loadOrSeed, saveAll } from './src/server/db/sqlite';
 
 async function startServer() {
+  loadOrSeed();
   const app = express();
-  const PORT = 3000;
-
-  // JSON Body Parser Middleware
-  app.use(express.json());
+  const PORT = Number(process.env.PORT || 3000);
+  app.use(express.json({ limit: '10mb' })); // photos arrive as data URLs
 
   // API Health Check
   app.get('/api/health', (req, res) => {
@@ -18,6 +18,18 @@ async function startServer() {
       timestamp: new Date().toISOString(),
       version: '2.4.0',
     });
+  });
+
+  // Save to SQLite after every request that changes data
+  app.use('/api', (req, res, next) => {
+    if (req.method !== 'GET') {
+      res.on('finish', () => {
+        if (res.statusCode < 400) {
+          try { saveAll(); } catch (err) { console.error('[db] save failed', err); }
+        }
+      });
+    }
+    next();
   });
 
   // Mount Feed & Swipe API Routes

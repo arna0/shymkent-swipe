@@ -47,7 +47,23 @@ FastAPI AI service (src/server/ai_service) — duplicate clustering + urgency sc
 | `POST /api/gamification/claim-streak` | Daily streak |
 | `POST /api/demo/seed` | Fill the database with Shymkent demo data |
 
+## Database
+
+The server stores users, reports and swipes in **SQLite** (`data/shymkent-swipe.db`, built into Node 22.13+, nothing to install). The tables have indexes for the feed (status + score) and the district dashboard, and a unique `(user_id, problem_id)` rule so one person can vote on a problem only once. The data survives restarts; CI checks this on every push.
+
+The full PostgreSQL design for a production version is in [`prisma/schema.prisma`](prisma/schema.prisma).
+
 ## Run it
+
+With Docker:
+
+```bash
+docker build -t shymkent-swipe .
+docker run -p 3000:3000 -v shymkent-data:/data shymkent-swipe   # http://localhost:3000
+```
+
+Or with Node.js 22.13+:
+
 
 ```bash
 npm install
